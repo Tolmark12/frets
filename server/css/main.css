@@ -1,0 +1,44 @@
+body {
+  background: #787A74; }
+
+.fretboard {
+  width: 2056px;
+  height: 255px;
+  background: url(/assets/fretboard.png);
+  position: relative; }
+  .fretboard .fret {
+    position: absolute;
+    top: 35px; }
+    .fretboard .fret.f0 {
+      left: 8px; }
+    .fretboard .fret.f1 {
+      left: 116px; }
+    .fretboard .fret.f2 {
+      left: 273px; }
+    .fretboard .fret.f3 {
+      left: 413px; }
+    .fretboard .fret.f4 {
+      left: 550px; }
+    .fretboard .fret.f5 {
+      left: 670px; }
+    .fretboard .fret.f6 {
+      left: 785px; }
+    .fretboard .fret.f7 {
+      left: 890px; }
+    .fretboard .fret.f8 {
+      left: 999px; }
+    .fretboard .fret.f9 {
+      left: 1100px; }
+    .fretboard .fret.f10 {
+      left: 1200px; }
+    .fretboard .fret.f11 {
+      left: 1290px; }
+    .fretboard .fret.f12 {
+      left: 1370px; }
+    .fretboard .fret .note {
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      opacity: 0.2; }
