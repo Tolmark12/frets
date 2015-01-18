@@ -1,22 +1,30 @@
 
-.fretboard { width:2056px; height:255px; background:url(/assets/fretboard.png); position:relative;
-  .fret    { position:absolute; top:35px;
-    &.f0   { left:8px; }
-    &.f1   { left:116px; }
-    &.f2   { left:273px;  }
-    &.f3   { left:413px;  }
-    &.f4   { left:550px;  }
-    &.f5   { left:670px;  }
-    &.f6   { left:785px;  }
-    &.f7   { left:890px;  }
-    &.f8   { left:999px;  }
-    &.f9   { left:1100px;  }
-    &.f10  { left:1200px;  }
-    &.f11  { left:1290px;  }
-    &.f12  { left:1370px;  }
+.fretboard         { width:2056px; height:255px; background:url(/assets/fretboard.png); position:relative;
+  .fret            { position:absolute; top:35px;
+    &.f0           { left:8px; }
+    &.f1           { left:116px; }
+    &.f2           { left:273px;  }
+    &.f3           { left:413px;  }
+    &.f4           { left:550px;  }
+    &.f5           { left:670px;  }
+    &.f6           { left:785px;  }
+    &.f7           { left:890px;  }
+    &.f8           { left:999px;  }
+    &.f9           { left:1100px;  }
+    &.f10          { left:1200px;  }
+    &.f11          { left:1290px;  }
+    &.f12          { left:1370px;  }
+    &.f13          { left:1450px;  }
+    &.f14          { left:1524px;  }
+    &.f15          { left:1591px;  }
+    &.f16          { left:1657px;  }
+    &.f17          { left:1723px;  }
+    &.f18          { left:1785px;  }
+    &.f19          { left:1839px;  }
+    &.f20          { left:1890px;  }
 
-    .note  { width:20px; height:20px; background:white; border-radius:50%; margin-bottom:12px; opacity:0.2;
-
+    .note          { @include transition(opacity, 0.2s); width:20px; height:20px; background:white; border-radius:50%; margin-bottom:12px; opacity:0.2;
+      &.highlight  { opacity:1; }
     }
   }
 }

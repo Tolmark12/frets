@@ -10,10 +10,11 @@ class Fretboard
     $el.append( @$node )
 
   addNotes : () ->
-    scale        = ['A', 'As', 'B', 'C', 'Cs', 'D', 'Ds', 'E', 'F', 'Fs', 'G', 'Gs']
+    scale        = ['A', 'AS', 'B', 'C', 'CS', 'D', 'DS', 'E', 'F', 'FS', 'G', 'GS']
     strings      = ['E', 'A', 'D', 'G', 'B', 'E']
-    totalFrets   = 12
+    totalFrets   = 20
     fullStrings  = []
+    strings.reverse()
 
     # Loop once for each string
     for string in strings

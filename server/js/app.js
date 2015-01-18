@@ -3,6 +3,7 @@ var Frets, frets;
 Frets = (function() {
   function Frets($el) {
     this.fretboard = new frets.Fretboard($el);
+    this.scaleMachine = new frets.ScaleMachine($el);
   }
 
   return Frets;
@@ -66,10 +67,11 @@ Fretboard = (function() {
 
   Fretboard.prototype.addNotes = function() {
     var fret, fullStrings, i, noteIndex, notes, scale, string, strings, totalFrets, _i, _j, _k, _len, _results;
-    scale = ['A', 'As', 'B', 'C', 'Cs', 'D', 'Ds', 'E', 'F', 'Fs', 'G', 'Gs'];
+    scale = ['A', 'AS', 'B', 'C', 'CS', 'D', 'DS', 'E', 'F', 'FS', 'G', 'GS'];
     strings = ['E', 'A', 'D', 'G', 'B', 'E'];
-    totalFrets = 12;
+    totalFrets = 20;
     fullStrings = [];
+    strings.reverse();
     for (_i = 0, _len = strings.length; _i < _len; _i++) {
       string = strings[_i];
       notes = [];
@@ -107,7 +109,6 @@ Note = (function() {
     });
     this.$node = $(node);
     $el.append(this.$node);
-    console.log("hullo I'm a " + note);
   }
 
   return Note;
@@ -115,3 +116,31 @@ Note = (function() {
 })();
 
 frets.Note = Note;
+
+var ScaleMachine;
+
+ScaleMachine = (function() {
+  function ScaleMachine($el) {
+    this.$el = $el;
+    frets.scaleMachine = this;
+  }
+
+  ScaleMachine.prototype.highlightNote = function(note, clearAll) {
+    if (clearAll == null) {
+      clearAll = false;
+    }
+    if (clearAll) {
+      this.clearHighlights();
+    }
+    return $(".note." + (note.toUpperCase())).addClass('highlight');
+  };
+
+  ScaleMachine.prototype.clearHighlights = function() {
+    return $(".note").removeClass("highlight");
+  };
+
+  return ScaleMachine;
+
+})();
+
+frets.ScaleMachine = ScaleMachine;

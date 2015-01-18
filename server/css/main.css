@@ -35,10 +35,32 @@ body {
       left: 1290px; }
     .fretboard .fret.f12 {
       left: 1370px; }
+    .fretboard .fret.f13 {
+      left: 1450px; }
+    .fretboard .fret.f14 {
+      left: 1524px; }
+    .fretboard .fret.f15 {
+      left: 1591px; }
+    .fretboard .fret.f16 {
+      left: 1657px; }
+    .fretboard .fret.f17 {
+      left: 1723px; }
+    .fretboard .fret.f18 {
+      left: 1785px; }
+    .fretboard .fret.f19 {
+      left: 1839px; }
+    .fretboard .fret.f20 {
+      left: 1890px; }
     .fretboard .fret .note {
+      -webkit-transition: opacity 0.2s linear 0s;
+      -moz-transition: opacity 0.2s linear 0s;
+      -o-transition: opacity 0.2s linear 0s;
+      transition: opacity 0.2s linear 0s;
       width: 20px;
       height: 20px;
       background: white;
       border-radius: 50%;
       margin-bottom: 12px;
       opacity: 0.2; }
+      .fretboard .fret .note.highlight {
+        opacity: 1; }
