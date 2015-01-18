@@ -10,7 +10,6 @@ class Fretboard
     $el.append( @$node )
 
   addNotes : () ->
-    scale        = ['A', 'AS', 'B', 'C', 'CS', 'D', 'DS', 'E', 'F', 'FS', 'G', 'GS']
     strings      = ['E', 'A', 'D', 'G', 'B', 'E']
     totalFrets   = 20
     fullStrings  = []
@@ -19,12 +18,12 @@ class Fretboard
     # Loop once for each string
     for string in strings
       notes     = []
-      noteIndex = _.indexOf scale, string
+      noteIndex = _.indexOf ScaleMachine.scale, string
 
       # Add a note for each fret
       for i in [0..totalFrets]
-        notes.push scale[noteIndex++]
-        if noteIndex >= scale.length then noteIndex = 0;
+        notes.push ScaleMachine.scale[noteIndex++]
+        if noteIndex >= ScaleMachine.scale.length then noteIndex = 0;
 
       fullStrings.push notes
 

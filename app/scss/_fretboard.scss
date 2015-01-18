@@ -1,5 +1,5 @@
 
-.fretboard         { width:2056px; height:255px; background:url(/assets/fretboard.png); position:relative;
+.fretboard         { width:2056px; height:255px; background:url(/assets/fretboard.png); position:relative; margin-top:120px;
   .fret            { position:absolute; top:35px;
     &.f0           { left:8px; }
     &.f1           { left:116px; }
@@ -23,7 +23,7 @@
     &.f19          { left:1839px;  }
     &.f20          { left:1890px;  }
 
-    .note          { @include transition(opacity, 0.2s); width:20px; height:20px; background:white; border-radius:50%; margin-bottom:12px; opacity:0.2;
+    .note          { @include transition(opacity, 0.2s); width:20px; height:20px; background:white; border-radius:50%; margin-bottom:12px; opacity:0;
       &.highlight  { opacity:1; }
     }
   }
